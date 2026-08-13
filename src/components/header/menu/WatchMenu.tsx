@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Menu.scss'
-import type { List } from '../../types/listType'
+import type { List } from '../../../types/listType'
 
 
 

@@ -12,7 +12,6 @@ import cartLogo from '../../images/Section-promo-images/card-title.png'
 import p1 from '../../images/Section-hero-images/promo_ipad_air_m4.jpg'
 import p3 from '../../images/Section-hero-images/promo_apple_watch_series_11__gnlwqxe1jlu2_medium_2x.jpg'
 import p4 from '../../images/Section-hero-images/promo_ipad_pro__emtduc920o02_medium_2x.jpg'
-import type React from 'react'
 
 
 type sectionList = {
