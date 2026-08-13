@@ -1,0 +1,253 @@
+header {
+    height: 44px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 998;
+    background: rgba(255, 255, 255, 0.823);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .close {
+            display: none;
+            position: fixed;
+            top: 17px;
+            right: 21px;
+            font-size: 15px;
+            z-index: 1001 !important;
+        }
+
+
+
+        .content {
+            max-width: 996px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(20px, calc(-6.444px + 3.111vw), 34px);
+
+        }
+
+        span {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bars {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+
+
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: clamp(20px, calc(-6.444px + 3.111vw), 34px);
+
+
+                li>a {
+                    font-size: 12px;
+                    color: #333333;
+                    font-weight: normal;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+
+
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(232, 232, 237, 0.4);
+    backdrop-filter: blur(20px);
+
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+}
+
+.menu-wrapper {
+    z-index: 997;
+    position: fixed;
+    left: 0;
+    top: 44px;
+    width: 100%;
+    padding: 0px 25px;
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        clip-path 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+        opacity 0.25s ease,
+        visibility 0s linear 0.45s;
+
+
+    &.open {
+        clip-path: inset(0 0 0% 0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transition:
+            clip-path 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+            opacity 0.25s ease,
+            visibility 0s linear 0s;
+    }
+
+
+    .back {
+        position: absolute;
+        top: 17px;
+        left: 21px;
+        font-size: 20px;
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width: 832px) {
+
+    header>.container {
+        .bars {
+            display: flex;
+
+        }
+
+        .close.active {
+            display: block;
+        }
+
+
+        .box {
+            span {
+                font-size: 21px;
+
+            }
+        }
+
+        .logo{
+            font-size: 21px;
+         
+        }
+    }
+
+
+
+
+    header>.container>.content>nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 55px 45px;
+        min-height: 100dvh;
+        transition: 0.3s ease;
+        display: flex;
+        align-items: start;
+        transform: translateY(-150%);
+        justify-content: start;
+        background: #FAFAFC;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        &.active {
+            transform: translateY(0%);
+        }
+
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            justify-content: center;
+            align-items: start;
+            gap: 12px;
+
+            li>a {
+                font-size: 28px;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .menu-wrapper {
+
+        position: absolute;
+        z-index: 999;
+        top: 0 !important;
+        left: 0;
+        padding: 15px 45px;
+        overflow-y: auto;
+        height: 100dvh;
+        background: #FAFAFC;
+
+        .back{
+            display: block;
+        }
+
+    }
+
+
+}

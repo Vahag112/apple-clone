@@ -1,0 +1,42 @@
+header, main, footer{
+  max-width: 2559px;
+  margin: 0 auto;
+}
+
+body{
+  padding-top: 44px ;
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+
+
+button{
+  font-family: 'inter', sans-serif;
+}
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf');
+  font-display: swap;
+}
+
+body{
+  font-family: 'inter' , Helvetica,Arial,sans-serif;
+}
+
+.col{
+  background: #FAFAFC;
+}
