@@ -7,7 +7,7 @@ import type { List } from '../../../types/listType'
 
 
 
-export default function IpadMenu() {
+export default function IphoneMenu() {
 
 
     const exploreAll: List[] = [

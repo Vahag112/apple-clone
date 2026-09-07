@@ -167,7 +167,9 @@ header {
 @media(max-width: 832px) {
 
     header>.container {
+      
         .bars {
+            
             display: flex;
 
         }
@@ -182,12 +184,14 @@ header {
                 font-size: 21px;
 
             }
+
         }
 
         .logo{
             font-size: 21px;
          
         }
+     
     }
 
 

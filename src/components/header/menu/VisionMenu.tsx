@@ -4,27 +4,27 @@ import type { List } from '../../../types/listType'
 
 
 
-export default function MacMenu() {
+export default function VisionMenu() {
 
 
     const exploreAll: List[] = [
-        { id: '130', name: 'Explore Apple Vision Pro',        href: '/' },
+        { id: '131', name: 'Explore Apple Vision Pro',        href: '/' },
     ]
 
     const shop: List[] = [
-        { id: '131', name: 'Shop Apple Vision Pro'            ,   href: '/' },
-        { id: '132', name: 'Apple Vision Pro Accessories'      ,   href: '/' },
-        { id: '133', name: 'Book a Demo'        ,   href: '/' },
-        { id: '134', name: 'Financing'            ,   href: '/' },
-        { id: '135', name: 'Personal Setup'       ,   href: '/' },
+        { id: '132', name: 'Shop Apple Vision Pro'            ,   href: '/' },
+        { id: '133', name: 'Apple Vision Pro Accessories'      ,   href: '/' },
+        { id: '134', name: 'Book a Demo'        ,   href: '/' },
+        { id: '135', name: 'Financing'            ,   href: '/' },
+        { id: '136', name: 'Personal Setup'       ,   href: '/' },
 
     ]
 
     const moreFrom: List[] = [
-        { id: '136', name: 'Apple Vision Pro Support'                , href: '/' },
-        { id: '137', name: 'AppleCare'                  , href: '/' },
-        { id: '138', name: 'visionOS 27 Preview'           , href: '/' },
-        { id: '139', name: 'Apple Vision Pro for Enterprise', href: '/' },
+        { id: '137', name: 'Apple Vision Pro Support'                , href: '/' },
+        { id: '138', name: 'AppleCare'                  , href: '/' },
+        { id: '139', name: 'visionOS 27 Preview'           , href: '/' },
+        { id: '140', name: 'Apple Vision Pro for Enterprise', href: '/' },
 
     ]
 

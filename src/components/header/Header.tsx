@@ -13,6 +13,8 @@ import VisionMenu from './menu/VisionMenu';
 import { TfiClose } from "react-icons/tfi";
 import { HiBars2 } from "react-icons/hi2";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import AirpodsMenu from "./menu/AirpodsMenu";
+import TvHomeMenu from "./menu/TvHomeMenu";
 
 
 
@@ -21,6 +23,7 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 type NavList = {
     id: string
     name: string
+    name2?: string
     href: string
 }
 
@@ -35,17 +38,17 @@ export default function Header() {
 
 
     const navList: NavList[] = [
-        { id: '1', name: 'Store', href: '/' },
-        { id: '2', name: 'Mac', href: '/' },
-        { id: '3', name: 'iPad', href: '/' },
-        { id: '4', name: 'iPhone', href: '/' },
-        { id: '5', name: 'Watch', href: '/' },
-        { id: '6', name: 'Vision', href: '/' },
-        { id: '7', name: 'AirPods', href: '/' },
-        { id: '8', name: 'TV & Home', href: '/' },
-        { id: '9', name: 'Entertainment', href: '/' },
-        { id: '10', name: 'Accessories', href: '/' },
-        { id: '11', name: 'Support', href: '/' }
+        { id: '1',   name: 'Store',                href: '/' },
+        { id: '2',   name: 'Mac',                 href: '/' },
+        { id: '3',   name: 'iPad',                href: '/' },
+        { id: '4',   name: 'iPhone',                href: '/' },
+        { id: '5',   name: 'Watch',                href: '/' },
+        { id: '6',   name: 'Vision',                href: '/' },
+        { id: '7',   name: 'AirPods',                href: '/' },
+        { id: '8',   name: 'TVHome',        name2: 'TV & Home',         href: '/' },
+        { id: '9',   name: 'Entertainment',         href: '/' },
+        { id: '10',  name: 'Accessories',           href: '/' },
+        { id: '11',  name: 'Support',                href: '/' }
     ]
 
     const menusMap: Record<string, React.ReactNode> = {
@@ -54,7 +57,9 @@ export default function Header() {
         iPad: <IpadMenu />,
         iPhone: <IphoneMenu />,
         Watch: <WatchMenu />,
-        Vision: <VisionMenu />
+        Vision: <VisionMenu />,
+        AirPods: <AirpodsMenu />,
+        TVHome: <TvHomeMenu />
     }
 
     const openMenu = (name: string) => {
@@ -85,12 +90,17 @@ export default function Header() {
                             <ul>
                                 {
                                     navList.map((elem) => (
-                                        <li key={elem.id} onMouseEnter={() => openMenu(elem.name)}><Link onClick={(e) => {
+                                        <li key={elem.id} onMouseEnter={() => {
+                                            if(open){
+                                                return ;
+                                            }
+                                            openMenu(elem.name)
+                                        }}><Link onClick={(e) => {
                                             if (!activeMenu) {
                                                 e.preventDefault()
                                                 openMenu(elem.name)
                                             }
-                                        }} to={elem.href}>{elem.name}</Link></li>
+                                        }} to={elem.href}>{elem.name2 ? elem.name2 : elem.name}</Link></li>
                                     ))
                                 }
 
