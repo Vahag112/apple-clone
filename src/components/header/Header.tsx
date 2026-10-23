@@ -15,6 +15,9 @@ import { HiBars2 } from "react-icons/hi2";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import AirpodsMenu from "./menu/AirpodsMenu";
 import TvHomeMenu from "./menu/TvHomeMenu";
+import EntertainmentMenu from "./menu/EntertainmentMenu";
+import AccessoriesMenu from "./menu/AccessoriesMenu";
+import SupportMenu from "./menu/SupportMenu";
 
 
 
@@ -59,7 +62,10 @@ export default function Header() {
         Watch: <WatchMenu />,
         Vision: <VisionMenu />,
         AirPods: <AirpodsMenu />,
-        TVHome: <TvHomeMenu />
+        TVHome: <TvHomeMenu />,
+        Entertainment: <EntertainmentMenu />,
+        Accessories: <AccessoriesMenu />,
+        Support: <SupportMenu />
     }
 
     const openMenu = (name: string) => {
